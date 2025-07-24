@@ -28,4 +28,4 @@ install:
 	poetry install --no-root
 
 test:
-	poetry run pytest --benchmark-autosave --cov=$(SRC_DIR) --cov-branch --cov-report=xml --numprocesses logical $(TESTS_DIR)
+	poetry run pytest --benchmark-autosave --cov=$(SRC_DIR) --cov-branch --cov-report=xml --numprocesses logical $(SRC_DIR)
