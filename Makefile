@@ -29,3 +29,6 @@ install:
 
 test:
 	poetry run pytest --benchmark-autosave --cov=$(SRC_DIR) --cov-branch --cov-report=xml --numprocesses logical $(SRC_DIR)
+
+run:
+	poetry run python $(SRC_DIR)/main.py
