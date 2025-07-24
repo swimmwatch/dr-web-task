@@ -4,7 +4,7 @@ target-version = ["py313"]
 
 [tool.flake8]
 inline-quotes = "double"
-ignore = "E203, W503, S101, D100, D104, D102, D101, D106, D107"
+ignore = "E203, W503, S101, D100, D104, D102, D101, D106, D107, D103"
 max-line-length = 120
 docstring-convention = "google"
 per-file-ignores = [
