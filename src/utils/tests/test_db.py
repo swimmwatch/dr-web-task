@@ -6,11 +6,13 @@ def test_set_and_get():
     db.set("a", 1)
     assert db.get("a") == 1
 
+
 def test_unset():
     db = InMemoryDatabase()
     db.set("a", 1)
     db.unset("a")
     assert db.get("a") is None
+
 
 def test_counts():
     db = InMemoryDatabase()
@@ -20,6 +22,7 @@ def test_counts():
     assert db.counts(1) == 2
     assert db.counts(2) == 1
 
+
 def test_find():
     db = InMemoryDatabase()
     db.set("a", 1)
@@ -27,6 +30,7 @@ def test_find():
     db.set("c", 2)
     keys = db.find(1)
     assert set(keys) == {"a", "b"}
+
 
 def test_transactions_begin_rollback():
     db = InMemoryDatabase()
@@ -37,6 +41,7 @@ def test_transactions_begin_rollback():
     db.rollback()
     assert db.get("a") == 1
 
+
 def test_transactions_begin_commit():
     db = InMemoryDatabase()
     db.set("a", 1)
@@ -44,6 +49,7 @@ def test_transactions_begin_commit():
     db.set("a", 2)
     db.commit()
     assert db.get("a") == 2
+
 
 def test_multiple_transactions():
     db = InMemoryDatabase()

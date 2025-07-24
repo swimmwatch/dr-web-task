@@ -6,7 +6,10 @@ from utils.commands import CommandRequest
 
 class Repl:
     def __init__(
-        self, input_stream: io.TextIOBase, output_stream: io.TextIOBase, command_processor: CommandHandlerProcessor,
+        self,
+        input_stream: io.TextIOBase,
+        output_stream: io.TextIOBase,
+        command_processor: CommandHandlerProcessor,
     ):
         self.input_stream = input_stream
         self.output_stream = output_stream
